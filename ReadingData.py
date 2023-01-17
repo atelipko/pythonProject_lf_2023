@@ -6,7 +6,7 @@ def Read(name, my_list):
     max_rows = sheet.max_row
 
     # Собираем структуру Point
-    for i in range(6, max_rows):
+    for i in range(6, max_rows+1):
 
         s = Class_Point.Point(sheet['A' + str(i)].value, sheet['C' + str(i)].value, sheet['D' + str(i)].value,
                               sheet['E' + str(i)].value, sheet['F' + str(i)].value, sheet['G' + str(i)].value,

@@ -19,37 +19,38 @@ def copiMatrix(my_list):
             else: temp=0
 
     print("my_list="+str(len(my_list))+ "   my_list_Mat= "+ str(len(my_list_Mat)))
-    #my_list_dis = [[-1] * 1 for i in range(int(len(my_list_Mat)))]
-    #disMatrix_1(my_list)
     SetPosMatrix(my_list)
-#def setValueDis(i,j,list_v,namber)
 
 
 def SetPosMatrix(my_list):
-    a = Class_Point
-    #for i in range(len(my_list_Mat)):
-    #    my_list_dis=[[-1] * 1 for r in range(len(my_list_Mat))]
+
     # создаем списак имен
     tempList= []
     for i in range(len(my_list_Mat)):
         tempList.append(my_list_Mat[i].name)
     for i in range(0, len(my_list)):
         my_list[i].set_posMatrix(tempList.index(my_list[i].name))
+
+    for i in range(len(tempList)):
+        matrixDist=[[0] * len(tempList) for r in range(len(tempList))]
+
     tempList.clear()
-#def setValueDis(my_list):
+
+    setValueDis(my_list,matrixDist)
+
+def setValueDis(my_list,matrixDist):
+
+    for i in range(len(my_list)):
+        for j in range(i,int(len(my_list))):
+            if my_list[i].get_posMatrix()==my_list[j].get_posMatrix():
+                matrixDist[my_list[i].posMatrix][my_list[j].posMatrix]=-1
+            elif my_list[i].get_namber()==my_list[j].get_namber():
+                matrixDist[my_list[i].posMatrix][my_list[j].posMatrix] = my_list[j].lgth
+                matrixDist[my_list[j].posMatrix][my_list[i].posMatrix] = my_list[j].lgth
 
 
-        #for j in range(0, len(my_list_Mat)):
-         #   if i==j:
-          #     # my_list_dis[i][j]=0
-           #     a = my_list[j]
-            #    a.set_posMatrix(j)
-        #    else:
-        #        a = my_list[j]
-        #        a.set_posMatrix(j)
-
-#                for q in range(j, len(my_list_d)):
- #                   if a.get_namber()==my_list_d[q].get_namber():
- #                       w=int(a.get_lgth())
- #                       my_list_dis[i][j]=w
-    print(" ")# + str(my_list_dis[0][0])+" " + str(my_list_dis[0][1])+" " + str(my_list_dis[0][2])+" " + str(my_list_dis[0][3])+" " + str(my_list_dis[0][4]))
+    #print(matrixDist)
+    for i in range(len(my_list)):
+        if my_list[i].get_posMatrix()!=-1:
+            my_list[i].matrixDist=matrixDist[my_list[i].posMatrix]
+    #getMatrixDist(matrixDist)

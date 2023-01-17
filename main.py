@@ -1,6 +1,7 @@
 # This is a sample Python script.
 import ReadingData
 import DistanceMatrix
+import LogicDist
 
 # Press Shift+F10 to execute it or replace it with your code.
 #import openpyxl
@@ -19,6 +20,8 @@ if __name__ == '__main__':
     #print(str(len(my_list)))
     ReadingData.Read("1.xlsx", my_list)
     DistanceMatrix.copiMatrix(my_list)
+    LogicDist.LogicLines(my_list)
+
     #DistanceMatrix.disMatrix(DistanceMatrix.copiMatrix(my_list),my_list)
    # print(str(len(my_list)))
 
