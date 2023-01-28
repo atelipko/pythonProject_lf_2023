@@ -7,7 +7,9 @@ import LogicDist
 #import openpyxl
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-my_list=[] #Лисе объектов
+my_list=[] #Лист объектов
+my_list_notes=[] #Лист узлов
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -19,7 +21,7 @@ def print_hi(name):
 if __name__ == '__main__':
     #print(str(len(my_list)))
     ReadingData.Read("1.xlsx", my_list)
-    DistanceMatrix.copiMatrix(my_list)
+    #DistanceMatrix.copiMatrix(my_list)
     LogicDist.LogicLines(my_list)
 
     #DistanceMatrix.disMatrix(DistanceMatrix.copiMatrix(my_list),my_list)
