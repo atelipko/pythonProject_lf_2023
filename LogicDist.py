@@ -99,13 +99,20 @@ def LogicLines(my_list):
 
     for i in range(len(my_list_notes)):
         my_list_notes[i].setitemNote(my_list)
+        my_list_notes[i].TypeDefinitionNode()
+        my_list_notes[i].setSumLgth()
+        if my_list_notes[i].TypeNode==1:
+            my_list_notes[i].Definition_J()
 
+    print("________________")
     print(str(len(my_list_notes)))
-    print(my_list_notes[0].my_list_note)
-    print(my_list_notes[1].my_list_note)
-    print(my_list_notes[2].my_list_note)
-    print(my_list_notes[3].my_list_note)
-    print(my_list_notes[4].my_list_note)
+    print(str(my_list_notes[0].TypeNode) + "  FinihDefinition = " +str(my_list_notes[0].FinihDefinition) +"____"+ str(my_list_notes[0].my_list_Finih))
+    print(str(my_list_notes[1].TypeNode) + "  FinihDefinition = " +str(my_list_notes[1].FinihDefinition) +"____"+ str(my_list_notes[1].my_list_Finih))
+    print(str(my_list_notes[2].TypeNode) + "  FinihDefinition = " +str(my_list_notes[2].FinihDefinition) +"____"+ str(my_list_notes[2].my_list_Finih))
+    print(str(my_list_notes[3].TypeNode) + "  FinihDefinition = " +str(my_list_notes[3].FinihDefinition) +"____"+ str(my_list_notes[3].my_list_Finih))
+    print(str(my_list_notes[4].TypeNode) + "  FinihDefinition = " +str(my_list_notes[4].FinihDefinition) +"____"+ str(my_list_notes[4].my_list_Finih))
+    print(str(my_list_notes[5].TypeNode) + "  FinihDefinition = " +str(my_list_notes[5].FinihDefinition) +"____"+ str(my_list_notes[5].my_list_Finih))
 
+    print(str(my_list_notes[1].my_list_J))
     print("end")
 
