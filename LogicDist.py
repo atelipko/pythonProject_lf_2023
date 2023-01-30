@@ -74,7 +74,7 @@ def helpRmListID(my_list):
             if len(my_list[i].LinkIdList) == 0:
                 for j in range(len(my_list[i].posMyList)):
                     #a = my_list[i].posMyList[j]
-                    my_list[i].LinkIdList.append([my_list[my_list[i].posMyList[j]].LinkID])
+                    my_list[i].LinkIdList.append(my_list[my_list[i].posMyList[j]].LinkID)
             print("my_list[i].LinkIdList= " + str(my_list[i].LinkIdList) + " i= "+str(i))
 
 
@@ -103,6 +103,10 @@ def LogicLines(my_list):
         my_list_notes[i].setSumLgth()
         if my_list_notes[i].TypeNode==1:
             my_list_notes[i].Definition_J()
+    for i in range(len(my_list_notes)):
+        if my_list_notes[i].TypeNode==2:
+            my_list_notes[i].DefinitiFinih(my_list_notes)
+
 
     print("________________")
     print(str(len(my_list_notes)))
@@ -114,5 +118,6 @@ def LogicLines(my_list):
     print(str(my_list_notes[5].TypeNode) + "  FinihDefinition = " +str(my_list_notes[5].FinihDefinition) +"____"+ str(my_list_notes[5].my_list_Finih))
 
     print(str(my_list_notes[1].my_list_J))
+    print(str(my_list_notes[1].my_list_J_J))
     print("end")
 
