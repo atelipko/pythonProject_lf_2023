@@ -1,7 +1,7 @@
 import openpyxl
 import Class_Point
 def Read(name, my_list):
-    book = openpyxl.open(name)
+    book = openpyxl.open(name,data_only=True)
     sheet = book.active
     max_rows = sheet.max_row
 
@@ -19,3 +19,4 @@ def Read(name, my_list):
         my_list.append(s)
         s.set_flag()
         s.set_flag_end()
+    book.close()
