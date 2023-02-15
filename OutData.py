@@ -43,3 +43,9 @@ def example(list_):
             sheet.append(row)  # записываю данные в строки таблиц"""
 
     book.save("test.xlsx")
+    book.close()
+    caunt = 0
+    for i in range(len(list_)):
+        if list_[i].FinihDefinition == 0:
+            caunt += 1
+    print(caunt)

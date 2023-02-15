@@ -1,5 +1,6 @@
 import Class_Note
 import OutData
+import OutDataHTML
 
 from main import my_list_notes
 
@@ -103,7 +104,7 @@ def LogicLines(my_list):
         if my_list_notes[i].TypeNode==2:
             my_list_notes[i].DefinitiFinih(my_list_notes)
     OutData.example(my_list_notes)
-
+    OutDataHTML.getListData(my_list)
 
 """
     print("________________")
