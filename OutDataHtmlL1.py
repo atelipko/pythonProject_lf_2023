@@ -1,3 +1,5 @@
 
 def getListData(List_data):
-    pass
+    for i in range(len(List_data)):
+        print(List_data[i].my_list_Finih)
+    print(len(List_data))

@@ -48,4 +48,5 @@ def example(list_):
     for i in range(len(list_)):
         if list_[i].FinihDefinition == 0:
             caunt += 1
+            print(str(list_[i].my_list_note[0].namber) + " "+list_[i].my_list_note[0].name +" "+str(len(list_[i].my_list_note)))
     print(caunt)

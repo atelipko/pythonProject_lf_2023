@@ -1,6 +1,7 @@
 import Class_Note
 import OutData
 import OutDataHTML
+import OutDataHtmlL1
 
 from main import my_list_notes
 
@@ -72,7 +73,7 @@ def LogicS(my_list):
 
 def helpRmListID(my_list):
     for i in range(len(my_list)):
-        if my_list[i].f_RM == 1: #and len(my_list[i].posMyList) > 2:
+        if my_list[i].f_RM == 1 or my_list[i].f_BC:   #15.02.23 добавил or my_list[i].f_BC
             if len(my_list[i].LinkIdList) == 0:
                 for j in range(len(my_list[i].posMyList)):
                     #a = my_list[i].posMyList[j]
@@ -105,6 +106,7 @@ def LogicLines(my_list):
             my_list_notes[i].DefinitiFinih(my_list_notes)
     OutData.example(my_list_notes)
     OutDataHTML.getListData(my_list)
+    OutDataHtmlL1.getListData(my_list_notes)
 
 """
     print("________________")

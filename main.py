@@ -20,7 +20,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     #print(str(len(my_list)))
-    ReadingData.Read("new.xlsx", my_list)
+    ReadingData.Read("1.xlsx", my_list) #new.xlsx
     #DistanceMatrix.copiMatrix(my_list)
     LogicDist.LogicLines(my_list)
 
