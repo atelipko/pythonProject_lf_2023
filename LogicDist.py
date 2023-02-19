@@ -99,14 +99,15 @@ def LogicLines(my_list):
         my_list_notes[i].setitemNote(my_list)
         my_list_notes[i].TypeDefinitionNode()
         my_list_notes[i].setSumLgth()
+        my_list_notes[i].set_fiber_note()
         if my_list_notes[i].TypeNode==1:
             my_list_notes[i].Definition_J()
     for i in range(len(my_list_notes)):
         if my_list_notes[i].TypeNode==2:
             my_list_notes[i].DefinitiFinih(my_list_notes)
     OutData.example(my_list_notes)
-    OutDataHTML.getListData(my_list)
-    OutDataHtmlL1.getListData(my_list_notes)
+    #OutDataHTML.getListData(my_list)
+    #OutDataHtmlL1.getListData(my_list_notes)
 
 """
     print("________________")
